@@ -26,7 +26,7 @@ jobs:
 
       - name: Build, tag, and push image to Amazon ECR
         run: |
-          docker build -t dorismedplus:${{github.run_number}} .
+          docker build -t dorismedplus:${{github.run_number}}.
           docker tag dorismedplus:${{github.run_number}} 373317459706.dkr.ecr.us-east-1.amazonaws.com/dorismedplus:${{github.run_number}}
           docker push 373317459706.dkr.ecr.us-east-1.amazonaws.com/dorismedplus:${{github.run_number}}
 
